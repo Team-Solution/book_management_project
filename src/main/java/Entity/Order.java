@@ -34,8 +34,12 @@ String Payment_method;
 @DateTimeFormat(pattern = "MM/dd/yyyy")
 @Temporal(TemporalType.DATE)
 @Column(name = "Createdate")
-Date creaDate = new Date();
+Date creatDate = new Date();
 @ManyToOne
 @JoinColumn(name = "User_id")
 List<OrderDetail> orderDetails;
+
+@ManyToOne
+@JoinColumn(name = "status_id", referencedColumnName = "Status_id")
+private List<Order_status> status;
 }

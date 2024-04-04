@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -16,19 +16,16 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Account")
-public class Account {
+@Table(name = "Comments")
+public class Comments {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-Integer account_id;
-String name;
-String password;
-String Email;
-String Full_name;
-Integer User_id;
-String reset_Token;
+Integer Comments_id;
+Integer user_id;
+Integer Product_id;
+String Content;
 
-@OneToMany
-@JoinColumn(name = "User_id")
-private List<Users> users;
+@ManyToOne
+@JoinColumn(name = "Product_id", referencedColumnName = "Product_id")
+private List<Product> products;
 }

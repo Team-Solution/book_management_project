@@ -33,9 +33,14 @@ Date PublicationDate = new Date();
 Double Price;
 String image;
 String Type;
-Integer categories_id;
+Integer Categories_id;
 
 @ManyToOne
 @JoinColumn(name = "Categories_id")
 List<OrderDetail> orderDetails;
+
+@ManyToOne
+@JoinColumn(name = "Supplier_id", referencedColumnName = "Supplier"
+)
+private List<Supplier> suppliers;
 }

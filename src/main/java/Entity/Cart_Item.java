@@ -16,22 +16,21 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "OrderDetail")
-public class OrderDetail {
+@Table(name = "Cart_Item")
+public class Cart_Item {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-Integer Detail_id;
-Integer Order_id;
+Integer Item_id;
+Integer Cart_id;
 Integer Product_id;
 Integer Quantity;
 Double Price;
-Double Total_amount;
 
 @ManyToOne
-@JoinColumn(name = "Order_id", referencedColumnName = "Order_id")
-private List<Order> orders;
+@JoinColumn(name = "Cart_id", referencedColumnName = "Cart_id")//// referencedColumnName: chỉ định tên của cột chính trong bảng Cart mà cột Cart_id sẽ tham chiếu đến.
+private List<Cart> carts;
 
 @ManyToOne
 @JoinColumn(name = "Product_id", referencedColumnName = "Product_id")
-private List<Product> products;
+private List<Product> products;	
 }

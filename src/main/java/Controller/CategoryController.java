@@ -22,14 +22,12 @@ import Model.CreateCategoryRequest;
 import Model.MessageResponse;
 import Service.CategoryService;
 
-@CrossOrigin("*")
+
 @RestController
-@Controller
-@RequestMapping("/api/v1/category")
 public class CategoryController {
 	@Autowired
 	private CategoryService categoryService;
-	@GetMapping("api/categories")///lay danh sach danh muc
+	@GetMapping("/api/categories")  ///lay danh sach danh muc
 	public ResponseEntity<?> getListCategory(){
         List<Categories> categories = categoryService.findAll();
         return ResponseEntity.ok(categories);

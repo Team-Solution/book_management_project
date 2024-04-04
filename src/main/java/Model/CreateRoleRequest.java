@@ -1,21 +1,20 @@
 package Model;
 
+import javax.persistence.Column;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateCategoryRequest {
+public class CreateRoleRequest {
 
-	@NotNull(message = "danh muc trong")
-	@NotEmpty(message = "danh muc trong")
-	@Size(min=5, max=50, message="Độ dài danh mục từ 5-50 ký tự")
+	@NotNull(message = "ten khong duoc trong")
+	@NotEmpty(message = " ten khong duoc trong")
+	@Column(name = "Name")
 	private String name;
-	
-	
 }
