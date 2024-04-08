@@ -10,7 +10,7 @@ import Model.CreateCartRequest;
 @Service
 public interface CartService {
 List<Cart>findAll();
-List<Cart>fondCartsId(Integer id);
+List<Cart>findCartsId(Integer id);
 Cart createCart(CreateCartRequest requeste);
 Cart updateCart(Integer id, CreateCartRequest request);
 void enableCart(Integer id);

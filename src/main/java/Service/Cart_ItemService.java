@@ -15,7 +15,5 @@ List<Cart_Item>findProductId();
 List<Cart_Item>findAll();
 Cart_Item createCart_Item(CreateCart_ItemRequest request);
 Cart_Item updateCart_Item(Integer Id, CreateCart_ItemRequest request);
-void enableCart_Item(Integer id);
-
 void deleteById(Integer id);
 }
