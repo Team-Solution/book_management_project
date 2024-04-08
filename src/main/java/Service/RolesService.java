@@ -13,7 +13,6 @@ List<Roles> findAll();
 List<Roles> findById();
 Roles creatRole(CreateRoleRequest request);
 Roles updateRole(Integer id, CreateRoleRequest request);
-void enableRole(Integer id);
 void deleteRole(Integer id);
 
 }

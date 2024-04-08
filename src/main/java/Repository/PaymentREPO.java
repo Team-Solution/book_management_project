@@ -7,8 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import Entity.Payment;
 @Repository
-public interface PaymentREPO extends JpaRepository<PaymentREPO, Integer> {
+public interface PaymentREPO extends JpaRepository<Payment, Integer> {
 	List<Payment>findAllPayments();
 	List<Payment>findPaymentsById(Integer id);
+	@SuppressWarnings("unchecked")
 	Payment save(Payment updatePayments);
 }

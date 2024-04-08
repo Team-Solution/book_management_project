@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import Entity.Cart;
 @Repository
-public interface CartREPO extends JpaRepository<CartREPO, Integer>{
+public interface CartREPO extends JpaRepository<Cart, Integer>{
 @Query("Select c from Cart c where c.User_Id = User_Id")
 List<Cart>findByUserId(Integer Id);
 
@@ -16,5 +16,6 @@ List<Cart>findByCartId(Integer Id);
 
 List<Cart>findALL();
 
+@SuppressWarnings("unchecked")
 Cart save(Cart cart);
 }

@@ -7,8 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import Entity.Comments;
 @Repository
-public interface CommentREPO extends JpaRepository<CommentREPO, Integer>{
+public interface CommentREPO extends JpaRepository<Comments, Integer>{
 	List<Comments>findAllComments();
 	List<Comments>findCommentsById(Integer id);
+	@SuppressWarnings("unchecked")
 	Comments save(Comments comments);
 }

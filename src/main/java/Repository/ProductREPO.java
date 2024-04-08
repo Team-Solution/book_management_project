@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import Entity.Product;
 
 @Repository
-public interface ProductREPO extends JpaRepository<ProductREPO, Integer> {
+public interface ProductREPO extends JpaRepository<Product, Integer> {
 	@Query(value="Select*from Product order by id decs limit :number ")
 	List<Product>  findNewest(int number);
 	
@@ -29,6 +29,7 @@ public interface ProductREPO extends JpaRepository<ProductREPO, Integer> {
 	List<Product> searchProduct(String keyword );
 	List<Product> findALL();
 	List<Product> findByProductId(int id);
+	@SuppressWarnings("unchecked")
 	Product save(Product pd);
 }
 
