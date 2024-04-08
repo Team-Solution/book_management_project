@@ -20,7 +20,7 @@ public class Categories {
 	Integer Categories_id;
 	String name;
     private boolean enable;
+	}
 
-	
-}
+
 

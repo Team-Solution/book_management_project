@@ -16,6 +16,4 @@ public class CreateCategoryRequest {
 	@NotEmpty(message = "danh muc trong")
 	@Size(min=5, max=50, message="Độ dài danh mục từ 5-50 ký tự")
 	private String name;
-	
-	
 }

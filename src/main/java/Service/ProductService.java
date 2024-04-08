@@ -8,13 +8,13 @@ import Entity.Product;
 import Model.CreateProductRequest;
 @Service
 public interface ProductService {
-
-	List<Product> getList();
-	List<Product> getlistNewst(int number);
-	List<Product> getListByPrice();
+	
+    
+	List<Product> findNewest(int number);
+	List<Product> findByPrice();
 	List<Product> findRelatedProduct(int id);
-	List<Product> getListProductByCategory(int id);
-	List<Product> getListByPriceRange(int id, int min, int max);
+	List<Product> findProductByCategory(int id);
+	List<Product> findByPriceRange(int id, int min, int max);
 	List<Product> searchProduct(String keyword);
 	Product getProduct(int id);
 	Product createProduct(CreateProductRequest request);

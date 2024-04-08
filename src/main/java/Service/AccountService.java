@@ -12,7 +12,7 @@ public interface AccountService {
 
 	List<Account> findAll();
 	List<Account> findById();
+	List<Account> findByResetToken();
 	Account creatAccount(CreateAccountRequest request);
 	Account updateAccount(Integer id, CreateAccountRequest request);
-	void enableUser (Integer id);
 }
