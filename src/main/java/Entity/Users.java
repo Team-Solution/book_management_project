@@ -1,0 +1,23 @@
+package Entity;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "Users")
+public class Users {
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+Integer User_id;
+String Username;
+String email;
+String Full_name;
+}
